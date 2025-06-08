@@ -9,7 +9,7 @@ Fișierele atașate sunt rezultatul următoarelor teme:
 ## 1. NFA
 
 **Script:** [nfa.py](nfa.py)  
-**Input:** [nfa](nfa)
+**Input:** [nfa]([nfa])
 
 ### Rulare
 ```bash
@@ -76,7 +76,7 @@ python3 pda.py
 ## 4. Mașina Turing
 
 **Script:** [turing.py](turing.py)  
-**Input:** [turing](turing)
+**Input:** [turing]([turing])
 
 Această mașină Turing verifică dacă inputul este de forma:
 ```
