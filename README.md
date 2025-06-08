@@ -22,22 +22,34 @@ python3 nfa.py
 
 ## 2. Joc în DFA/NFA
 
-**Script:** [secvential_input.py](secvential_input.py)  
-**Input:** [castle_game.bd](castle_game.bd)
+**Script:** [game.py](game.py)  
+**Input:** [game]([game])
 
 Pentru joc am creat un script separat care acceptă inputul *symbol cu symbol* pentru a fi mai distractiv.
 
 ### Acțiuni posibile
-- `n` - mergi în nord
-- `e` - mergi în est  
-- `s` - mergi în sud
-- `w` - mergi în vest
-- `p` - ridică cheie (pick up)
+- `n` - nord
+- `e` - est  
+- `s` - sud
+- `w` - vest
+- `p` - pick up
 
-### Reprezentare grafică
-![Diagrama abstractă - castle game](imagini/castle_game.png)
-
-**Notă:** Reprezentarea de mai sus este o formă simplificată a diagramei adevărate întrucât fiecare cameră are o formă **cu** și **fără** cheie pentru a simula camerele încuiate.
+**Notă:** Pentru a castiga:
+```bash
+1. w         → GARDEN_MODULE
+2. p         → pick up CARD1
+3. p         → GARDEN_MODULE+CARD
+4. e         → HUB+CARD
+5. n         → AIRLOCK
+6. n         → CENTRAL
+7. n         → DINING_BAY
+8. w         → KITCHEN
+9. p         → pick up CARD2
+10. p        → KITCHEN+CARD
+11. e        → DINING_BAY+CARD
+12. n        → CREW_QUARTERS+CARD
+13. n        → POD ✅ YOU WIN!
+```
 
 ### Rulare
 ```bash
