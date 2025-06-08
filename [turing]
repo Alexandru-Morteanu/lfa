@@ -1,0 +1,64 @@
+[states]
+q0
+q1
+q2
+q3
+q4
+q_accept
+q_reject
+
+[symbols]
+0
+1
+5
+X
+Y
+Z
+_
+
+[start]
+q0
+
+[accept]
+q_accept
+
+[rules]
+q0 0 -> q1 X R
+q0 X -> q0 X R
+q0 Y -> q0 Y R
+q0 Z -> q0 Z R
+q0 _ -> q4 _ L
+q0 1 -> q_reject 1 S
+q0 5 -> q_reject 5 S
+
+q1 0 -> q1 0 R
+q1 X -> q1 X R
+q1 Y -> q1 Y R
+q1 Z -> q1 Z R
+q1 1 -> q2 Y R
+q1 5 -> q_reject 5 S
+q1 _ -> q_reject _ S
+
+q2 0 -> q2 0 R
+q2 1 -> q2 1 R
+q2 X -> q2 X R
+q2 Y -> q2 Y R
+q2 Z -> q2 Z R
+q2 5 -> q3 Z L
+q2 _ -> q_reject _ S
+
+q3 X -> q3 X L
+q3 Y -> q3 Y L
+q3 Z -> q3 Z L
+q3 0 -> q3 0 L
+q3 1 -> q3 1 L
+q3 5 -> q3 5 L
+q3 _ -> q0 _ R
+
+q4 X -> q4 X L
+q4 Y -> q4 Y L
+q4 Z -> q4 Z L
+q4 _ -> q_accept _ S
+q4 0 -> q_reject 0 S
+q4 1 -> q_reject 1 S
+q4 5 -> q_reject 5 S
