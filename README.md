@@ -80,7 +80,7 @@ python3 pda.py
 
 Această mașină Turing verifică dacă inputul este de forma:
 ```
-{ 0^n 1^n | n>0 }
+{ 0ⁿ 1ⁿ 5ⁿ | n ≥ 1 }
 ```
 
 ### Rulare
