@@ -1,0 +1,25 @@
+[states]
+q_init q0 q1 q2 q3 q4 q_accept
+
+[symbols]
+0 1
+
+[stack]
+Z A
+
+[rules]
+q_init ε ε → q0 Z
+q0 0 ε → q0 A
+q0 0 A → q0 AA
+q0 1 A → q1 ε
+q1 1 A → q1 ε
+q1 1 Z → q2 Z
+q2 1 Z → q3 Z
+q3 1 Z → q4 Z
+q4 ε Z → q_accept ε
+
+[start]
+q_init
+
+[accept]
+q_accept
