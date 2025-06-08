@@ -6,12 +6,10 @@ Fișierele atașate sunt rezultatul următoarelor teme:
 
 ---
 
-## 1. DFA și NFA
+## 1. NFA
 
 **Script:** [nfa.py](nfa.py)  
-**Input:** [nfa.bd](nfa.bd)
-
-Ambele tipuri de automate sunt abordate în același fișier.
+**Input:** [nfa](nfa)
 
 ### Rulare
 ```bash
@@ -61,11 +59,11 @@ python3 game.py "[game]"
 ## 3. PDA (Pushdown Automaton)
 
 **Script:** [pda.py](pda.py)  
-**Input:** [pda.bd](pda.bd)
+**Input:** [pda]([pda])
 
 Acest PDA verifică dacă inputul este de forma:
 ```
-{ 0ⁿ 1ᵐ | n ≥ 1, m >= 1, m > n + 2 }
+{ 0ⁿ 1ᵐ | n ≥ 1, m ≥ 1, m > n + 2 }
 ```
 
 ### Rulare
@@ -78,7 +76,7 @@ python3 pda.py
 ## 4. Mașina Turing
 
 **Script:** [turing.py](turing.py)  
-**Input:** [turing.bd](turing.bd)
+**Input:** [turing](turing)
 
 Această mașină Turing verifică dacă inputul este de forma:
 ```
@@ -87,5 +85,5 @@ Această mașină Turing verifică dacă inputul este de forma:
 
 ### Rulare
 ```bash
-python3 turing.py turing.bd
+python3 turing.py "[turing]"
 ```
