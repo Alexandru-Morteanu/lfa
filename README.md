@@ -53,7 +53,7 @@ Pentru joc am creat un script separat care acceptă inputul *symbol cu symbol* p
 
 ### Rulare
 ```bash
-python3 secvential_input.py castle_game.bd
+python3 game.py "[game]"
 ```
 
 ---
@@ -65,12 +65,12 @@ python3 secvential_input.py castle_game.bd
 
 Acest PDA verifică dacă inputul este de forma:
 ```
-{ a^n b^m | n>0, m>0, n>m }
+{ 0ⁿ 1ᵐ | n ≥ 1, m >= 1, m > n + 2 }
 ```
 
 ### Rulare
 ```bash
-python3 pda.py pda.bd
+python3 pda.py
 ```
 
 ---
